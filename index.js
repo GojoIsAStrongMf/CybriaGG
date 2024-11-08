@@ -27,7 +27,6 @@ if (cluster.isMaster) {
   });
 
   app.use('/', (req, res) => {
-    console.log(`Incoming Requests: ${req.url}`);
     proxy.web(req, res);
   });
 
